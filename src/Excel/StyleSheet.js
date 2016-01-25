@@ -40,7 +40,9 @@ var StyleSheet = function () {
         left: {},
         right: {},
         bottom: {},
-        diagonal: {}
+        diagonal: {},
+        horizontal: {},
+        vertical: {}
     }];
     this.tableStyles = [];
 };
@@ -159,7 +161,9 @@ _.extend(StyleSheet.prototype, {
                 left: {},
                 right: {},
                 bottom: {},
-                diagonal: {}
+                diagonal: {},
+                horizontal: {},
+                vertical: {}
     });
         }
         if (styleInstructions.fill && _.isObject(styleInstructions.fill)) {
@@ -194,6 +198,8 @@ _.extend(StyleSheet.prototype, {
     * right: {},
     * bottom: {},
     * diagonal: {},
+    * horizontal: {},
+    * vertical: {},
     * outline: boolean,
     * diagonalUp: boolean,
     * diagonalDown: boolean
@@ -212,6 +218,8 @@ _.extend(StyleSheet.prototype, {
             right: {},
             bottom: {},
             diagonal: {},
+            horizontal: {},
+            vertical: {},
             id: this.borders.length
         });
         this.borders.push(border);
@@ -313,6 +321,8 @@ _.extend(StyleSheet.prototype, {
         border.appendChild(borderGenerator('top'));
         border.appendChild(borderGenerator('bottom'));
         border.appendChild(borderGenerator('diagonal'));
+        border.appendChild(borderGenerator('horizontal'));
+        border.appendChild(borderGenerator('vertical'));
         return border;
     },
 
