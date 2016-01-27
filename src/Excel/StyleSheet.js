@@ -321,8 +321,8 @@ _.extend(StyleSheet.prototype, {
         border.appendChild(borderGenerator('top'));
         border.appendChild(borderGenerator('bottom'));
         border.appendChild(borderGenerator('diagonal'));
-        border.appendChild(borderGenerator('horizontal'));
         border.appendChild(borderGenerator('vertical'));
+        border.appendChild(borderGenerator('horizontal'));
         return border;
     },
 
